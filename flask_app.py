@@ -1,4 +1,3 @@
-# A very simple Flask Hello World app for you to get started with...
 from flask import Flask, redirect, request, abort, make_response
 app = Flask(__name__)
 @app.route('/')
