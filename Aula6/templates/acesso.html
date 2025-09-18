@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Dados do acesso{% endblock %}
+
+{% block page_content %}
+<style>
+  fieldset.margem{
+    margin-left: 15px;
+  }
+</style>
+<fieldset class="margem">
+    <legend>Dados do acesso</legend>
+
+    <h3>Você está acessando o sistema por meio do usuário <b>{{ username }}</b></h3>
+</fieldset>
+<br>
+<p>The local date and time is {{ moment(current_time).format('LLLL') }}.</p>
+<p>{{ moment(current_time).fromNow(refresh=True) }}</p>
+{% endblock %}
